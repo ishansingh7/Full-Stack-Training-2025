@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        div {
+            background-color: rgb(125, 125, 230);
+            padding: 40px;
+            border: 10px solid green;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        h1 {
+            color: #1e0303;
+            margin-bottom: 20px;
+        }
+        input[type="text"],
+        input[type="password"] {
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+        }
+        input[type="submit"] {
+            padding: 10px;
+            width: 100%;
+            font-size: 16px;
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: darkgreen;
+        }
+        h3 {
+            margin-bottom: 10px;
+            color: #110e02;
+        }
+        h3:hover {
+            color: rgb(74, 49, 222);
+        }
+        .success-message {
+            display: none;
+            background-color: #e0ffe0;
+            padding: 20px;
+            border: 2px solid #4caf50;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .success-message h2 {
+            color: green;
+        }
+        .success-message button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .proceed {
+            background-color: #4caf50;
+            color: white;
+        }
+        .proceed:hover {
+            background-color: darkgreen;
+        }
+        .cancel {
+            background-color: #f44336;
+            color: white;
+        }
+        .cancel:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <div id="loginForm">
+        <h1>Login Form</h1>
+        Username:<input type="text" name="username" id="username" placeholder="Username"><br>
+        Password:<input type="password" name="password" id="password" placeholder="Password"><br>
+        <input type="submit" value="Login" id="login">
+        <h3>Create Account</h3>
+        <h3>Forget Password?</h3>
+    </div>
+    
+
+    <div id="successMessage" class="success-message">
+        <h2>Login Successful!</h2>
+        <p>Do you want to proceed with the application?</p>
+        <button class="proceed" id="proceed">Proceed</button>
+        <button class="cancel" id="cancel">Cancel</button>
+    </div>
+
+    <script>
+        document.getElementById('login').addEventListener('click', function () {
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value.trim();
+
+            if (!username || !password) {
+                alert('Please enter both username and password!');
+            } else {
+                
+                document.getElementById('loginForm').style.display = 'none';
+                document.getElementById('successMessage').style.display = 'block';
+            }
+        });
+
+        document.getElementById('proceed').addEventListener('click', function () {
+            // Redirect to the next page
+            window.location.href = 'https://ishansingh.com.np/?i=1';
+        });
+
+        document.getElementById('cancel').addEventListener('click', function () {
+            // Hide the success message and show the login form again
+            document.getElementById('successMessage').style.display = 'none';
+            document.getElementById('loginForm').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
