@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Grid</title>
+        <style>
+            .grid-container {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+              padding:50px;
+              border: 2px solid blue;
+              background-color: aqua;
+
+            }
+            #grid-item {
+               margin: 10px;
+                padding: 30px;
+                width: 20px;
+                height: 20px;
+                background-color: blue;
+                color: white;
+                border :1px dotted rgb(184, 243, 24);
+              
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>This is grid example</h1>
+        </div>
+        <div class="grid-container">
+            <div id="grid-item">1</div>
+            <div id="grid-item">2</div>
+            <div id="grid-item">3</div>
+            <div id="grid-item">4</div>
+            <div id="grid-item">5</div>
+            <div id="grid-item">6</div>
+            <div id="grid-item">7</div>
+            <div id="grid-item">8</div>
+            <div id="grid-item">9</div>
+        </div>
+    </body>
+</html>
