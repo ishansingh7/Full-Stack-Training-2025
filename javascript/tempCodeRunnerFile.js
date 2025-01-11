@@ -1,4 +1,7 @@
-var a=5
-var b="5"
-console.log(a==b)
-console.log(a===b)
+likecode = async () => {
+    return new Promise((likePost) => {
+        setTimeout(() => {
+            likePost("Post liked successfully");
+        }, 0); // Added a delay of 0 to fix the missing argument for setTimeout
+    });
+};
