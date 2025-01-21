@@ -1,9 +1,14 @@
 const Navabar = () => {
 
+    var styling ={display:"flex",
+        justifyContent:"space-around",
+        listStyle:"none",padding:"10px",
+        backgroundColor:"black",color:"white"}
+
     return (
         <header>
             <nav>
-     <ol>
+     <ol style ={styling}>
         <li>Home</li>
         <li>About</li>
         <li>Contact</li>
