@@ -1,27 +1,20 @@
-const Navabar = () => {
+import { Link } from 'react-router-dom'; 
+import '../../src/css/Navbar.css'; 
 
-    var styling ={display:"flex",
-        justifyContent:"space-around",
-        listStyle:"none",padding:"10px",
-        backgroundColor:"black",color:"white"}
-
-    return (
-        <header>
-            <nav>
-     <ol style ={styling}>
-        <li>Home</li>
-        <li>About</li>
-        <li>Contact</li>
-        <li>Glarry</li>
-    </ol>
-            </nav>
-
-        </header>
-
-
-
-    )
-
-
+const Navbar = () => {
+  return (
+    <header>
+      <nav>
+        <ol>
+          <li><Link to="/">Home</Link></li> 
+          <li><Link to="/about">About</Link></li> 
+          <li><Link to="/gallery">Gallery</Link></li> 
+          <li><Link to="/contact">Contact</Link></li> 
+          <li><Link to="/signup">Signup</Link></li> 
+        </ol>
+      </nav>
+    </header>
+  );
 }
-export default Navabar;
+
+export default Navbar;
