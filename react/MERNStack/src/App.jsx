@@ -7,7 +7,9 @@ import Navbar from './components/Navbar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Signup from './components/signup';
 import UseState from './Hooks/UseState';
-import UseEffect from './Hooks/useEffect';
+import UseEffect from './Hooks/UseEffect';
+import UseEffectApi from './Hooks/UseEffectAPI';
+
 
 
 function App() {
@@ -21,10 +23,12 @@ function App() {
         <Route path="/gallery" element={<Gallery image="ishan logo" page="Gallery" />} />
         <Route path="/class-comp-eg" element={<ClassCompEG />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/use-effect" element={<UseEffect />} />
         <Route path="/use-state" element={<UseState />} />
+        <Route path="/use-effect" element={<UseEffect />} />
+        <Route path="/use-api" element={<UseEffectApi />} />
         
-      </Routes>
+        
+      </Routes>x``
     </BrowserRouter>
   );
 }
