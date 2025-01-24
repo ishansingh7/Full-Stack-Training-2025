@@ -25,11 +25,16 @@ const toggleDropdown = () =>{
               <li><Link to="https:/ishansingh.com.np">List1</Link></li>
               <li><Link to="">List2</Link></li>
               <li><Link to="">List3</Link></li>
+              <li><Link to ='/use-memo' class ='Link'>UseMemo</Link></li>
+              <li><Link to ='/use-call' class ='Link'>UseCallBack</Link></li>
             </ul>)}
           </div>
           <li><Link to ='/use-state'>useState</Link></li>
           <li><Link to ='/use-effect' class ='Link'>useEffect</Link></li>
           <li><Link to ='/use-api' class ='Link'>UseEffectAPI</Link></li>
+          <li><Link to ='/use-Ref' class ='Link'>UseRef</Link></li>
+          
+
 
           <li><Link to="/signup">Signup</Link></li> 
          

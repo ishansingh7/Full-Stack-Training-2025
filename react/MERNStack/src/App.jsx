@@ -9,6 +9,12 @@ import Signup from './components/signup';
 import UseState from './Hooks/UseState';
 import UseEffect from './Hooks/UseEffect';
 import UseEffectApi from './Hooks/UseEffectAPI';
+import UseRef from './Hooks/UseRef';
+import UseMemo from './Hooks/UseMemo';
+import UseCallBack from './Hooks/UseCallBack';
+
+
+
 
 
 
@@ -26,7 +32,14 @@ function App() {
         <Route path="/use-state" element={<UseState />} />
         <Route path="/use-effect" element={<UseEffect />} />
         <Route path="/use-api" element={<UseEffectApi />} />
-        
+        <Route path="/use-Ref" element={<UseRef />} />
+        <Route path="/use-memo" element={<UseMemo />} />
+        <Route path="/use-call" element={<UseCallBack />} />
+       
+
+       
+       
+       
         
       </Routes>x``
     </BrowserRouter>
