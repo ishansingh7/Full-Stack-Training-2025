@@ -12,6 +12,12 @@ import UseEffectApi from './Hooks/UseEffectAPI';
 import UseRef from './Hooks/UseRef';
 import UseMemo from './Hooks/UseMemo';
 import UseCallBack from './Hooks/UseCallBack';
+import ReactLifeCycle from './classcomponents/ReactLifeCycle';
+import LazyLoadingSuspense from './contextComponents/LazyLoadingSuspense';
+import HoC from './Hoc/HoC';
+import UseLocalStorage from './Hooks/useLocalStorage';
+
+
 
 
 
@@ -35,6 +41,11 @@ function App() {
         <Route path="/use-Ref" element={<UseRef />} />
         <Route path="/use-memo" element={<UseMemo />} />
         <Route path="/use-call" element={<UseCallBack />} />
+        <Route path="/react-lifecycle" element={<ReactLifeCycle />} />
+        <Route path="/lazy-load" element={<LazyLoadingSuspense/>} />
+        <Route path="/use-local" element={<UseLocalStorage/>} />
+        <Route path="/hoc" element={<HoC/>} />
+  
        
 
        
