@@ -1,0 +1,18 @@
+{
+  "name": "secebackend",
+  "version": "1.0.0",
+  "description": "this is MERN Traning Backend code and practiceing project file",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ishaan",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.7",
+    "mongoose": "^8.9.5",
+    "nodemon": "^3.1.9"
+  }
+}
