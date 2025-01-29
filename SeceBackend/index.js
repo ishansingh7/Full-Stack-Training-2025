@@ -5,10 +5,11 @@ const dotenv = require("dotenv");
 const Signup = require("./models/signupSchema"); 
 const app = express();
 dotenv.config();
+const cors = require("cors");
 
 app.use(express.json()); 
 
-mongoose.connect(process.env.MONGODB_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.MONGODB_URL)
   .then(() => {
     console.log("Database connected");
   })
@@ -26,19 +27,21 @@ app.get("/static/", (req, res) => {
 
 app.post("/signup/", async (req, res) => {
   const { firstName, lastName, userName, email, password } = req.body; 
+  var hashedPassword =  await bcrypt.hashSync(password, 10);
+  console.log(hashedPassword);
   try {
    
-    const newCustomer = new Signup({
+    const newuser = new Signup({
       firstName: firstName,
       lastName: lastName, 
       userName: userName,
       email: email,
-      password: password,
+      password: hashedPassword,
     });
 
     // Save to database  
 
-    await newCustomer.save();
+    await newuser.save();
     res.status(201).send("User created successfully");
   } catch (error) {
     console.error("Error creating user:", error);
@@ -54,6 +57,7 @@ app.post('/update', async (req, res) => {
 
 app.post('/delete', async (req, res) => {
   try {
+    
     var deletedUser = await Signup.findOneAndDelete({ "userName": "ishan2060" });
     if (deletedUser) {
       res.send("User deleted successfully");

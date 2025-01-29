@@ -52,7 +52,7 @@ function App() {
        
        
         
-      </Routes>x``
+      </Routes>
     </BrowserRouter>
   );
 }
